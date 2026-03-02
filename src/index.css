@@ -24,8 +24,8 @@
 
   /* Gradients */
   --gradient-gold: linear-gradient(135deg, #d4a853, #f0d48a, #d4a853);
-  --gradient-hero: linear-gradient(160deg, #0a0e1a 0%, #111827 40%, #1a1a3e 100%);
-  --gradient-card: linear-gradient(145deg, #1a2035 0%, #151c2e 100%);
+  --gradient-hero: linear-gradient(160deg, #0a191a 0%, #21483d 40%, #1a323e 100%);
+  --gradient-card: linear-gradient(145deg, #1a2035 0%, #010101 100%);
   --gradient-glow: radial-gradient(ellipse at 50% 0%, rgba(212, 168, 83, 0.12) 0%, transparent 70%);
 
   /* Typography */
