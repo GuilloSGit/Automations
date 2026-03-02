@@ -1,6 +1,6 @@
+import { useCurrency } from '../context/CurrencyContext';
 import {
     modules,
-    CURRENCY,
     PACK_DISCOUNT,
     getTotalDevelopment,
     getTotalMaintenance,
@@ -9,6 +9,7 @@ import {
 } from '../data/modulesData';
 
 export default function PricingTable() {
+    const { formatPrice } = useCurrency();
     const totalDev = getTotalDevelopment();
     const totalMaint = getTotalMaintenance();
     const packPrice = getPackPrice();
@@ -41,12 +42,10 @@ export default function PricingTable() {
                                         <span className="module-code">{mod.id}</span>
                                     </td>
                                     <td className="price-cell">
-                                        {mod.price}
-                                        {CURRENCY}
+                                        {formatPrice(mod.price)}
                                     </td>
                                     <td className="price-cell">
-                                        {mod.maintenance}
-                                        {CURRENCY}
+                                        {formatPrice(mod.maintenance)}
                                     </td>
                                 </tr>
                             ))}
@@ -59,12 +58,10 @@ export default function PricingTable() {
                                     </span>
                                 </td>
                                 <td className="price-cell">
-                                    {totalDev}
-                                    {CURRENCY}
+                                    {formatPrice(totalDev)}
                                 </td>
                                 <td className="price-cell">
-                                    {totalMaint}
-                                    {CURRENCY}
+                                    {formatPrice(totalMaint)}
                                 </td>
                             </tr>
 
@@ -74,16 +71,14 @@ export default function PricingTable() {
                                     <span className="module-name">🏆 Pack Completo</span>
                                     <span className="module-code">PACK-FULL</span>
                                     <span className="pricing__discount-badge">
-                                        Ahorro de {PACK_DISCOUNT}{CURRENCY}
+                                        Ahorro de {formatPrice(PACK_DISCOUNT)}
                                     </span>
                                 </td>
                                 <td className="price-cell">
-                                    {packPrice}
-                                    {CURRENCY}
+                                    {formatPrice(packPrice)}
                                 </td>
                                 <td className="price-cell">
-                                    {packMaint}
-                                    {CURRENCY}
+                                    {formatPrice(packMaint)}
                                 </td>
                             </tr>
                         </tbody>

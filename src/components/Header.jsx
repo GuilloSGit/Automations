@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
+import { useCurrency } from '../context/CurrencyContext';
 
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+    const [currencyOpen, setCurrencyOpen] = useState(false);
+    const { currency, setCurrency, currencies } = useCurrency();
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 50);
@@ -22,7 +25,33 @@ export default function Header() {
                 <div className="header__logo">
                     GA Software <span>| Automatización</span>
                 </div>
-                <nav>
+                <nav style={{ display: 'flex', alignItems: 'center' }}>
+                    {/* Currency Selector */}
+                    <div className="currency-selector">
+                        <button
+                            className="currency-selector__btn"
+                            onClick={() => setCurrencyOpen(!currencyOpen)}
+                        >
+                            <span>{currency.icon}</span> {currency.code}
+                        </button>
+                        {currencyOpen && (
+                            <div className="currency-selector__dropdown">
+                                {currencies.map((curr) => (
+                                    <button
+                                        key={curr.code}
+                                        className={`currency-selector__option ${currency.code === curr.code ? 'currency-selector__option--active' : ''}`}
+                                        onClick={() => {
+                                            setCurrency(curr);
+                                            setCurrencyOpen(false);
+                                        }}
+                                    >
+                                        <span>{curr.icon}</span> {curr.code}
+                                    </button>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+
                     <ul className={`header__nav ${menuOpen ? 'open' : ''}`}>
                         {navItems.map((item) => (
                             <li key={item.href}>

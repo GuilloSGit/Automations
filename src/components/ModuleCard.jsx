@@ -1,8 +1,9 @@
 import { HiOutlineCheck } from 'react-icons/hi';
-import { CURRENCY } from '../data/modulesData';
+import { useCurrency } from '../context/CurrencyContext';
 
 export default function ModuleCard({ module, index }) {
     const isReverse = index % 2 !== 0;
+    const { formatPrice } = useCurrency();
 
     return (
         <article
@@ -47,13 +48,13 @@ export default function ModuleCard({ module, index }) {
                     <div className="module-card__price-item">
                         <div className="module-card__price-label">Desarrollo</div>
                         <div className="module-card__price-value">
-                            {module.price}{CURRENCY}
+                            {formatPrice(module.price)}
                         </div>
                     </div>
                     <div className="module-card__price-item">
                         <div className="module-card__price-label">Mantenimiento</div>
                         <div className="module-card__price-value">
-                            {module.maintenance}{CURRENCY}
+                            {formatPrice(module.maintenance)}
                             <small>/mes</small>
                         </div>
                     </div>

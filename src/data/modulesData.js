@@ -7,8 +7,6 @@
  *  El total se calcula automáticamente en toda la web.
  */
 
-export const CURRENCY = "€";
-
 // Descuento del pack completo (en euros). Si es 0, se calcula como suma de módulos.
 export const PACK_DISCOUNT = 300;
 
