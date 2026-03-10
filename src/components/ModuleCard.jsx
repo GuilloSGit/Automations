@@ -67,7 +67,7 @@ export default function ModuleCard({ module, index }) {
                     </div>
                     {module.fixedCosts.map((cost, i) => (
                         <div className="module-card__cost-item" key={i}>
-                            <span>{formatPrice(cost.name)}</span>
+                            <span>{cost.name}</span>
                             <span>{formatPrice(cost.cost)}</span>
                         </div>
                     ))}
