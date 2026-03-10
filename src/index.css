@@ -15,9 +15,10 @@
   --color-accent-blue: #4f8fff;
 
   --color-text-primary: #f1f5f9;
-  --color-text-secondary: #94a3b8;
-  --color-text-muted: #64748b;
+  --color-text-secondary: #c6ced9;
+  --color-text-muted: #c9c9c9;
   --color-text-gold: #d4a853;
+  --color-text-tertiary: #c5c197;
 
   --color-border: rgba(212, 168, 83, 0.15);
   --color-border-hover: rgba(212, 168, 83, 0.35);
@@ -694,14 +695,15 @@ img {
 }
 
 .module-card__feature-text h4 {
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
   margin-bottom: 2px;
+  color: var(--color-text-primary);
 }
 
 .module-card__feature-text p {
   font-size: 0.82rem;
-  color: var(--color-text-muted);
+  color: var(--color-text-tertiary);
   line-height: 1.5;
 }
 
@@ -761,6 +763,7 @@ img {
 .module-card__cost-item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 0.8rem;
   color: var(--color-text-secondary);
   padding: var(--space-xs) 0;
@@ -769,7 +772,8 @@ img {
 .module-card__cost-item span:last-child {
   color: var(--color-text-muted);
   font-family: 'Courier New', monospace;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
 }
 
 /* ===== PRICING TABLE ===== */

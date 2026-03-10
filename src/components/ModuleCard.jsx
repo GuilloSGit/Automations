@@ -36,8 +36,8 @@ export default function ModuleCard({ module, index }) {
                                 <HiOutlineCheck />
                             </div>
                             <div className="module-card__feature-text">
-                                <h4>{feat.name}</h4>
-                                <p>{feat.desc}</p>
+                                <h4 className="module-card__feature-title">{feat.name}</h4>
+                                <p className="module-card__feature-description">{feat.desc}</p>
                             </div>
                         </div>
                     ))}
@@ -68,7 +68,7 @@ export default function ModuleCard({ module, index }) {
                     {module.fixedCosts.map((cost, i) => (
                         <div className="module-card__cost-item" key={i}>
                             <span>{cost.name}</span>
-                            <span>~{cost.cost > 0 ? formatPrice(cost.cost) : cost.description}</span>
+                            <span className="module-card__cost-value">~{cost.cost > 0 ? formatPrice(cost.cost) : cost.description}</span>
                         </div>
                     ))}
                 </div>
