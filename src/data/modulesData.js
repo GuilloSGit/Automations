@@ -91,7 +91,7 @@ export const modules = [
         price: 500,
         maintenance: 120,
         fixedCosts: [
-            { name: "Stripe / PayPal (comisiones)", cost: 0, description: "~1.4% + 0.25€/transacción" },
+            { name: "Stripe / PayPal (comisiones)", cost: 0, description: "1.4% + 0.25€/transacción" },
             { name: "SMS (envío de links)", cost: 0.07, description: "/SMS" },
         ],
         features: [

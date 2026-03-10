@@ -36,9 +36,6 @@ export default function Footer() {
 
                 <div className="footer__bottom">
                     <span>© 2026 GA Software. Todos los derechos reservados.</span>
-                    <div className="footer__validity">
-                        📄 Propuesta válida por 30 días desde su emisión — Marzo 2026
-                    </div>
                 </div>
             </div>
         </footer>

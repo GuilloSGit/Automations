@@ -982,18 +982,6 @@ img {
   font-size: 0.78rem;
 }
 
-.footer__validity {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-sm);
-  background: rgba(212, 168, 83, 0.08);
-  border: 1px solid rgba(212, 168, 83, 0.12);
-  padding: var(--space-xs) var(--space-md);
-  border-radius: var(--radius-full);
-  font-size: 0.75rem;
-  color: var(--color-text-muted);
-}
-
 /* ===== RESPONSIVE ===== */
 @media (max-width: 968px) {
   .module-card {
