@@ -22,9 +22,9 @@ export const modules = [
         price: 350,
         maintenance: 100,
         fixedCosts: [
-            { name: "Twilio (telefonía)", cost: "~30€/mes" },
-            { name: "Vapi (voice AI)", cost: "~25€/mes" },
-            { name: "OpenAI (GPT)", cost: "~15€/mes según volumen" },
+            { name: "Twilio (telefonía)", cost: 30, description: "/mes" },
+            { name: "Vapi (voice AI)", cost: 25, description: "/mes" },
+            { name: "OpenAI (GPT)", cost: 15, description: "/mes según volumen" },
         ],
         features: [
             {
@@ -57,8 +57,8 @@ export const modules = [
         price: 400,
         maintenance: 100,
         fixedCosts: [
-            { name: "Make.com (integraciones)", cost: "~20€/mes" },
-            { name: "Google Calendar / PMS API", cost: "Variable" },
+            { name: "Make.com (integraciones)", cost: 20, description: "/mes" },
+            { name: "Google Calendar / PMS API", cost: 0, description: "Variable" },
         ],
         features: [
             {
@@ -91,8 +91,8 @@ export const modules = [
         price: 500,
         maintenance: 120,
         fixedCosts: [
-            { name: "Stripe / PayPal (comisiones)", cost: "~1.4% + 0.25€/transacción" },
-            { name: "SMS (envío de links)", cost: "~0.07€/SMS" },
+            { name: "Stripe / PayPal (comisiones)", cost: 0, description: "~1.4% + 0.25€/transacción" },
+            { name: "SMS (envío de links)", cost: 0.07, description: "/SMS" },
         ],
         features: [
             {
@@ -125,7 +125,7 @@ export const modules = [
         price: 250,
         maintenance: 80,
         fixedCosts: [
-            { name: "OpenAI (embeddings + GPT)", cost: "~10€/mes" },
+            { name: "OpenAI (embeddings + GPT)", cost: 10, description: "/mes" },
         ],
         features: [
             {
@@ -158,8 +158,8 @@ export const modules = [
         price: 300,
         maintenance: 100,
         fixedCosts: [
-            { name: "Make.com (automatizaciones)", cost: "~15€/mes" },
-            { name: "Hosting de dashboard", cost: "~10€/mes" },
+            { name: "Make.com (automatizaciones)", cost: 15, description: "/mes" },
+            { name: "Hosting de dashboard", cost: 10, description: "/mes" },
         ],
         features: [
             {
