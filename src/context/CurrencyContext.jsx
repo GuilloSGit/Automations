@@ -1,11 +1,12 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { ES, US, AR } from 'country-flag-icons/react/3x2'
 
 const CurrencyContext = createContext();
 
 export const currencies = [
-    { code: 'EUR', symbol: '€', label: 'Euro (España)', icon: '🇪🇸' },
-    { code: 'USD', symbol: '$', label: 'Dólar (EE.UU.)', icon: '🇺🇸' },
-    { code: 'ARS', symbol: '$', label: 'Peso Argentino', icon: '🇦🇷' },
+    { code: 'EUR', symbol: '€', label: 'Euro (España)', icon: ES },
+    { code: 'USD', symbol: '$', label: 'Dólar (EE.UU.)', icon: US },
+    { code: 'ARS', symbol: '$', label: 'Peso Argentino', icon: AR },
 ];
 
 export const CurrencyProvider = ({ children }) => {

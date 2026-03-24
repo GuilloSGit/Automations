@@ -32,7 +32,8 @@ export default function Header() {
                             className="currency-selector__btn"
                             onClick={() => setCurrencyOpen(!currencyOpen)}
                         >
-                            <span>{currency.icon}</span> {currency.code}
+                            <currency.icon style={{ width: '18px', height: '13px', borderRadius: '2px' }} />
+                            <span>{currency.code}</span>
                         </button>
                         {currencyOpen && (
                             <div className="currency-selector__dropdown">
@@ -45,7 +46,8 @@ export default function Header() {
                                             setCurrencyOpen(false);
                                         }}
                                     >
-                                        <span>{curr.icon}</span> {curr.code}
+                                        <curr.icon style={{ width: '18px', height: '13px', borderRadius: '2px' }} />
+                                        <span>{curr.code}</span> ( {curr.symbol} )
                                     </button>
                                 ))}
                             </div>
