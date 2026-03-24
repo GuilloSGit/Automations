@@ -4,6 +4,7 @@ import ModuleCard from './components/ModuleCard';
 import PricingTable from './components/PricingTable';
 import Footer from './components/Footer';
 import { modules } from './data/modulesData';
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   return (
@@ -32,6 +33,7 @@ export default function App() {
 
       <PricingTable />
       <Footer />
+      <Analytics />
     </>
   );
 }
